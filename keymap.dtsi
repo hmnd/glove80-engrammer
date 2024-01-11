@@ -160,7 +160,7 @@
 #define KEY_RH_C5R4 N
 #define MOD_RH_C5R4 LGUI
 #define KEY_RH_C6R4 Q
-#define KEY_LH_C6R5 LSHFT
+#define KEY_LH_C6R5 ESC
 #define KEY_LH_C5R5 G
 #define KEY_LH_C4R5 X
 #define KEY_LH_C3R5 J
@@ -179,10 +179,10 @@
 #define KEY_RH_C5R5 P
 #define KEY_RH_C6R5 RSHFT
 #define KEY_LH_C6R6 0
-#define KEY_LH_C5R6 HOME
-#define KEY_LH_C4R6 PG_UP
-#define KEY_LH_C3R6 PG_DN
-#define KEY_LH_C2R6 END
+#define KEY_LH_C5R6 N1
+#define KEY_LH_C4R6 ESC
+#define KEY_LH_C3R6 DELETE
+#define KEY_LH_C2R6 BACKSPACE
 #define KEY_LH_T4 BACKSPACE
 #define KEY_LH_T5 DELETE
 #define KEY_LH_T6 0
