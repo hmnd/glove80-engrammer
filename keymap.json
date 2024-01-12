@@ -1,12 +1,12 @@
 {
   "keyboard": "glove80",
   "uuid": "",
-  "date": 1704959141,
+  "date": 1705030850,
   "creator": "",
-  "parent_uuid": "09a64bf7-0a31-4f21-924c-6f9c428ae123",
+  "parent_uuid": "b97683e2-2dae-4fb9-870f-a2e44914669e",
   "firmware_api_version": "1",
   "locale": "en-US",
-  "title": "LThumbless v12 - Fork of Sunaku's Keymap v33 (Glorious Engrammer)",
+  "title": "LThumbless v13 - Fork of Sunaku's Keymap v33 (Glorious Engrammer)",
   "notes": "Sunaku's Keymap v33 for the \"Glorious Engrammer\" 🧑‍🚀🚀✨\n- Intro & setup: https://github.com/sunaku/glove80-keymaps\n- Release notes: https://github.com/sunaku/glove80-keymaps/releases/tag/v33\n- Documentation: https://sunaku.github.io/moergo-glove80-keyboard.html#layers\n- Printable PDF: https://sunaku.github.io/moergo-glove80-keyboard-layers.pdf\n\nSummary:\nThis release adds bilateral combinations as an optional feature for a more natural and more responsive typing experience, restores \"tap then hold\" key repetition as an optional feature, fixes Emoji/Unicode typing in Windows, connects the Typing layer to the user's chosen alpha layout on the base layer, adds World currency signs and quotation marks, adds weather and shifted Emojis, and more! 💁\n\nChanges:\n- Add optional `#define ENFORCE_BILATERAL` setting to enforce strict bilateral combinations for home row mods (disallow same-sided / one-handed home row mod + tap).  This fixes the problem where left+right index finger mods would double up instead of tapping: for example, hold H (Shift) + tap A should produce capital A but previously they produced nothing since they doubled up together as Shift+Shift = Shift.\n- Add `#define ENABLE_KEY_REPEAT` setting as an optional feature to allow \"tap then hold\" key repetition, independently of the `&plain` repetiton keys introduced in v32.\n- Replace `&homey_*` and `&shift_*` with per-finger hold-taps, whose settings can be overridden individually or together as groups (inherit from top-level HOMEY*/CHORD* settings).\n- Enable `hold-trigger-on-release` for index finger shifts to allow chording in any direction (not only inward rolls).  This makes the implementation of all home row mods uniform, so there are no special differences between fingers anymore by default (unless you explicitly configure them otherwise via per-finger settings).  Rename SHIFT->INDEX accordingly.\n- Rename `&engram_*` behaviors to use actual ZMK keycode names.\n- Reduce typing streak decay period for index finger shifts from 130ms to 100ms.\n- World layer: add currency symbols for the top five most traded currencies.\n- World layer: add corner quotes for East Asian (CJK) languages; split previous quotes cluster key into separate left/right keys.\n- Emoji layer: add Shift modifier for moon phases (normal=waning, shifted=waxing); make waning phases the default (unshifted) for left-to-right \"progress bar\" indicators.\n- Emoji layer: add weather, time of day, a few shifted faces, and change some of the faces on right hand upper row.\n- Windows users: you'll need to install/run WinCompose to type Unicode characters now -- get it from https://github.com/samhocevar/wincompose\n- Windows users: if you change the WinCompose hotkey (e.g. to F13), simply override UNICODE_SEQ_WINDOWS() accordingly:\n    #define UNICODE_SEQ_WINDOWS(keystrokes) \\\n        &kp F13 keystrokes &kp ENTER\n- Replace ColemakDH layout with Workman to accommodate the top 5 most popular layouts.",
   "tags": [
     "sunaku",
@@ -252,19 +252,19 @@
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "GRAVE",
+            "value": "&thumb LAYER_Function GRAVE",
             "params": []
           }
         ]
       },
       {
-        "value": "&kp",
+        "value": "Custom",
         "params": [
           {
-            "value": "B",
+            "value": "&thumb LAYER_Symbol B",
             "params": []
           }
         ]
@@ -471,7 +471,7 @@
         "value": "Custom",
         "params": [
           {
-            "value": "&thumb LAYER_Number ESC",
+            "value": "&thumb LAYER_Cursor ESC",
             "params": []
           }
         ]
