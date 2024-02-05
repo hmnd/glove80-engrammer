@@ -674,14 +674,14 @@ behaviors {
     // action is triggered by the release of mods, such as LGUI which launches
     // the Windows Start Menu and LALT which opens the Microsoft Office Ribbon.
     //
-    //#define ENFORCE_BILATERAL
+    #define ENFORCE_BILATERAL
 
     //
     // ENABLE_KEY_REPEAT allows "tap then hold" repetition of the tap portion
     // of home row mods and layer access keys.  You can keep this disabled if
     // you prefer to use the &plain overlay method of key repetition instead.
     //
-    //#define ENABLE_KEY_REPEAT
+    #define ENABLE_KEY_REPEAT
 
     //
     // HOMEY_HOLDING_TYPE defines the flavor of ZMK hold-tap behavior to use
